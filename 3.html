@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label>username</label>
+        <br><br>
+        <input type="username">
+        <br><br>
+
+        <label>password</label>
+        <br><br>
+        <input type="password">
+        <br><br>
+
+        <button type="submit">submit</button>
+
+    </form>
+</body>
+</html>
+
+<script>
+    let form = document.getElementById("form");
+    let input=form.querySelectorAll('input');
+    let label= form.querySelectorAll('label');
+
+    form.addEventListener("submit",(e)=>
+{
+    e.preventDefault();
+
+    for (let i=0;i<input.length;i++){
+        console.log(`${label[i].textContent}:${input[i].value}`);
+    }
+}
+    
+    )
+</script>

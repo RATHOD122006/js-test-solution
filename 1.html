@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<body>
+
+</head>
+<form id="form">
+
+    <label> enter feranight</label><br>
+    <input type="num"> <br> <br>
+    <button type="submit">submit</button>
+</form>   
+</body>
+</html>
+<script>
+    let form = document.getElementById("form");
+    let input = form.querySelector('input');
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+
+        let cal = calculater(parseFloat(input.value));
+        function calculater(x){
+            
+            let a = (x-32)*(5/9);
+            return a;
+        }
+   
+         
+         let para = document.createElement('p');
+
+         para.textContent = cal;
+
+         form.appendChild(para);
+  })
+</script>

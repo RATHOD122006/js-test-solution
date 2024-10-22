@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>bank details</h1>
+    <div id="row"></div>
+</body>
+</html>
+<script>
+    let bacc =[
+        {
+            name : "sumit",
+            account_no :32110100005266,
+            ifsc_code : 'ipos0000001',
+            balance : 78500,
+
+        },
+        {
+            name : "jay",
+            account_no :321144558844,
+            ifsc_code : 'ipos0000001',
+            balance : 0.254,
+            
+        }
+    ]
+
+    let row = document.getElementById('row');
+    bacc.forEach((val,i)=> {
+        let m_div = document.createElement('div');
+        m_div.className = "main_div";
+
+        let name=document.createElement('p');
+        name.textContent=`name:${val.name}`;
+        m_div.appendChild(name);
+
+        let account_no=document.createElement('p');
+        account_no.textContent=`account number :${val.account_no}`;
+        m_div.appendChild(account_no);
+
+        let ifsc_code=document.createElement('p');
+        ifsc_code.textContent=`ifsc code :${val.ifsc_code}`;
+        m_div.appendChild(ifsc_code);
+
+        let balance=document.createElement('p');
+        balance.textContent=`balance :${val.balance}`;
+        m_div.appendChild(balance);
+
+        row.appendChild(m_div);
+
+        
+    });
+</script>
